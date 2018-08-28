@@ -9,7 +9,7 @@ data.name <- 'data.csv'
 new.columns <- c("Ecomm.Style.Code", "Description", "Season", "Gender", "Department", "Category", "Subcategory", "Consumer.Territory", "Division")
 
 #this formula imports the header and csv, subsets the csv and then exports it as a tab delimited file
-CreateClassificationFile <- function(adobeHeader, data, newColumns) {
+CreateClassificationFile <- function(adobeHeaderFileName, data, newColumns) {
   #import header file to get the column names
   adobe.header.file = read.table(adobeHeaderFileName,  sep='\t', header=T, check.names = F)
   
